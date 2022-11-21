@@ -1,0 +1,407 @@
+<html> 
+<head> 
+<title></title> 
+<script src="//code.jquery.com/jquery-1.10.2.js"></script> 
+<script>  
+$(function(){ 
+  $("#header").load("header.html");  
+  $("#footer").load("footer.html");  
+}); 
+</script>  
+</head> 
+<body> 
+   <div id="header"></div> 
+   <!-- end: .header -->
+      
+      <section class="breadcrumb_area breadcrumb1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="breadcrumb_wrapper d-flex align-items-center justify-content-between flex-wrap">
+                     <h4 class="page_title">Category Listing</h4>
+                     <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                           <li class="breadcrumb-item"><a href="#">Home</a></li>
+                           <li class="breadcrumb-item active" aria-current="page">Product page</li>
+                           <li class="breadcrumb-item"><a href="#">All</a></li>
+                        </ol>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+            <!-- ends: .row -->
+         </div>
+      </section>
+      <section class="products-wrapper p-top-30 p-bottom-30">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-md-4 order-md-0 m-bottom-30">
+                  <div class="sidebar">
+                     <!-- category widget -->
+                     <div class="widget-wrapper">
+                        <div class="widget-default">
+                           <div class="widget-header">
+                              <h6 class="widget-title">Category</h6>
+                           </div>
+                           <div class="accordion accordion_four" id="accordion_4_2">
+                              <div class="accordion-single">
+                                 <div class="accordion-heading" id="accordion_4_4_heading1">
+                                    <h6 class="mb-0">
+                                       <a href="#" class="bg-gray-light collapsed" data-toggle="collapse" data-target="#accordion_4_4_collapse1" aria-expanded="false" aria-controls="accordion_4_4_collapse1">
+                                       Silk
+                                       </a>
+                                    </h6>
+                                 </div>
+                                 <div id="accordion_4_4_collapse1" class="collapse" aria-labelledby="accordion_4_4_heading1" data-parent="#accordion_4_4">
+                                    <div class="accordion-contents">
+                                       <div class="list-types">
+                                          <ul class="bullet--list2">
+                                             <li class="bullet_list"><a href="#">All</a></li>
+                                          </ul>
+                                          <!-- ends: .bullet--list2 -->
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-single">
+                                 <div class="accordion-heading" id="accordion_4_2_heading1">
+                                    <h6 class="mb-0">
+                                       <a href="#" class="collapsed bg-gray-light" data-toggle="collapse" data-target="#accordion_4_2_collapse1" aria-expanded="false" aria-controls="accordion_4_2_collapse1">
+                                       Cotton
+                                       </a>
+                                    </h6>
+                                 </div>
+                                 <div id="accordion_4_2_collapse1" class="collapse" aria-labelledby="accordion_4_2_heading1" data-parent="#accordion_4_2">
+                                    <div class="accordion-contents">
+                                       <div class="list-types">
+                                          <ul class="bullet--list2">
+                                             <li class="bullet_list"><a href="#">All</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-single">
+                                 <div class="accordion-heading" id="accordion_4_2_heading1">
+                                    <h6 class="mb-0">
+                                       <a href="#" class="collapsed bg-gray-light" data-toggle="collapse" data-target="#accordion_4_2_collapse1" aria-expanded="false" aria-controls="accordion_4_2_collapse1">
+                                       Khadi
+                                       </a>
+                                    </h6>
+                                 </div>
+                                 <div id="accordion_4_2_collapse1" class="collapse" aria-labelledby="accordion_4_2_heading1" data-parent="#accordion_4_2">
+                                    <div class="accordion-contents">
+                                       <div class="list-types">
+                                          <ul class="bullet--list2">
+                                             <li class="bullet_list"><a href="#">All</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-single">
+                                 <div class="accordion-heading" id="accordion_4_2_heading1">
+                                    <h6 class="mb-0">
+                                       <a href="#" class="collapsed bg-gray-light" data-toggle="collapse" data-target="#accordion_4_2_collapse1" aria-expanded="false" aria-controls="accordion_4_2_collapse1">
+                                       Pochampally
+                                       </a>
+                                    </h6>
+                                 </div>
+                                 <div id="accordion_4_2_collapse1" class="collapse" aria-labelledby="accordion_4_2_heading1" data-parent="#accordion_4_2">
+                                    <div class="accordion-contents">
+                                       <div class="list-types">
+                                          <ul class="bullet--list2">
+                                             <li class="bullet_list"><a href="#">All</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- Ends: #accordion_four -->
+                        </div>
+                     </div>
+                     <!-- ends: .widget-wrapper -->
+                     <!-- price filter widget -->
+                  </div>
+                  <!-- ends: .sidebar -->
+               </div>
+               <div class="col-lg-9 col-md-8 order-0 order-md-1">
+                  <form id="sortBy" action="/customFilter" method="GET">
+                     <div class="product-sort d-flex justify-content-between align-items-center">
+                        <div class="sort d-flex align-items-center">
+                           <span class="m-right-15">Sort By: </span>
+                           <div class="form-group">
+                              <div class="select-basic" style="width:262px;">
+                                 <select id="customFilterSelect" name="selected" class="form-control">
+                                    <option value="featuredItems">Featured Items</option>
+                                    <option value="category">Category</option>
+                                    <option value="priceHighToLow">Price High - Low</option>
+                                    <option value="priceLowToHigh">Price Low - High</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="total-pages text-right">
+                           <p>Showing all results</p>
+                        </div>
+                     </div>
+                     <!-- ends: .product-sort -->
+                     <input id="categoryId" name="categoryId" type="hidden" value="1">
+                     <div>
+                     </div>
+                  </form>
+                  <div class="product-grid">
+                     <div class="row">
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/women.jpeg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Uppada Pattu Saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$90</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/cotton.jpeg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Musturd cotton saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$120</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/khadi3.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Grey Khadi saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$98</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/silk.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Red Silk saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$180</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/pochampaly.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Pochampally Saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$150</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/cotton2.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Red Cotton saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$140</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/silk2.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Peach uppada pattu saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$190</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/cotton3.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Green Cotton saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$140</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/cotton4.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Pink Cotton saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$140</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/pochampaly1.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Yellow Pochampally saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$170</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/silk3.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Red Silk Saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$210</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                           <div class="card card-product">
+                              <figure>
+                                 <img src="img/products/silk4.jpg" width="260" class="image-fit-cover" height="230" alt="">
+                                 <figcaption>
+                                    <ul class="d-flex justify-content-center">
+                                       <li><a href="viewCart.html" class="btn btn--rounded btn-outline-light btn-sm">Add To Cart</a></li>
+                                    </ul>
+                                 </figcaption>
+                              </figure>
+                              <div class="card-body">
+                                 <h6 class="text_restrict"><a href="productDetail.html">Green Pattu saree</a></h6>
+                                 <div class="prices">
+                                    <!--<span class="product-price color-secondary">N/A</span>-->
+                                    <span class="product-price color-secondary">$270</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- End: .card -->
+                        </div>
+                        <!-- ends: .col-lg-4 -->
+                     </div>
+                    
+                  </div>
+                  <!-- ends: .product-grid -->
+               </div>
+               <!-- ends: .col-lg-9 -->
+            </div>
+         </div>
+      </section>
+      <!-- ends: .gallery-grid -->
+      <div id="footer"></div> 
